@@ -3,6 +3,8 @@
  */
 package com.internousdev.login2.action;
 
+import java.util.Map;
+
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.internousdev.login2.dao.LoginDAO;
@@ -19,7 +21,8 @@ public class LoginAction extends ActionSupport implements SessionAware {
 	private Map<String,Object> session;
 
 	public String execute(){
-		Strin  ret = ERROR;
+		String  ret = ERROR;
+
 		LoginDAO dao = new LoginDAO();
 		LoginDTO dto = new LoginDTO();
 
